@@ -8,3 +8,8 @@ spring.datasource:
   url: jdbc:postgresql://localhost:5432/booking_alpha
   username: postgres
   password: 1234
+
+  booking:
+    app:
+        jwtSecret:RXpdyMaR1axUOC5jjVdV9wsiIj3CsVGRfjgebDk4P2c3lTVMRcGrHPnenGVOSYif
+        jwtExpirationMs:86400000
