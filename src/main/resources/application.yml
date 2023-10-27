@@ -11,5 +11,5 @@ spring.datasource:
 
   booking:
     app:
-        jwtSecret:RXpdyMaR1axUOC5jjVdV9wsiIj3CsVGRfjgebDk4P2c3lTVMRcGrHPnenGVOSYif
-        jwtExpirationMs:86400000
+      jwtSecret: RXpdyMaR1axUOC5jjVdV9wsiIj3CsVGRfjgebDk4P2c3lTVMRcGrHPnenGVOSYif
+      jwtExpirationMs: 86400000

@@ -1,4 +1,4 @@
-package com.abilov.bookingalphabackend.core.security.models;
+package com.abilov.bookingalphabackend.core.security.entities;
 
 import com.abilov.bookingalphabackend.entity.concretes.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
