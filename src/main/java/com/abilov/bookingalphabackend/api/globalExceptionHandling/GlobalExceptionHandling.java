@@ -1,7 +1,9 @@
 package com.abilov.bookingalphabackend.api.globalExceptionHandling;
 
 import com.abilov.bookingalphabackend.core.excepstions.config.NotFountException;
-import com.abilov.bookingalphabackend.core.excepstions.exceptionInfos.NotFoundExceptionInfo;
+import com.abilov.bookingalphabackend.core.excepstions.exceptionInfo.ResponseHeaderInfo;
+import com.abilov.bookingalphabackend.core.result.DataResult;
+import com.abilov.bookingalphabackend.core.result.ErrorDataResult;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -15,9 +17,11 @@ import java.time.LocalDateTime;
 public class NotFoundExceptionHandling {
 
         @ExceptionHandler(value = NotFountException.class)
-        public ResponseEntity<NotFoundExceptionInfo> handlingNotFound(){
-            NotFoundExceptionInfo notFoundExceptionInfo = new NotFoundExceptionInfo(404, "not found", LocalDateTime.now());
-            return new ResponseEntity<>(notFoundExceptionInfo, HttpStatus.BAD_REQUEST);
+        public ResponseEntity<DataResult<ResponseHeaderInfo>> handlingNotFound(){
+            ResponseHeaderInfo responseHeaderInfo = new ResponseHeaderInfo(404, "Bad Request",
+                    LocalDateTime.now());
+            return new ResponseEntity<>(new ErrorDataResult<>(responseHeaderInfo, "something is bad"),
+                    HttpStatus.NOT_FOUND);
         }
 
 }
