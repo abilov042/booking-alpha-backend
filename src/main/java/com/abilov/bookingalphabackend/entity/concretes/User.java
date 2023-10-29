@@ -26,18 +26,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    @Size(max = 50)
     @Column(name = "full_name")
     private String fullName;
 
-    @NotBlank
-    @Size(max = 50)
-    @Email
+    @Column(name ="email")
     private String email;
 
-    @NotBlank
-    @Size(max = 120)
+    @Column(name = "password")
     private String password;
 
     @ManyToMany(fetch = FetchType.LAZY)

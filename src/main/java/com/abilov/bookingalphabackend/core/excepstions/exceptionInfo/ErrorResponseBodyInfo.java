@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
-public class ResponseHeaderInfo {
+public class ErrorResponseBodyInfo {
     private int status;
-    private String description;
+    private String error;
     private LocalDateTime date;
 
 }
