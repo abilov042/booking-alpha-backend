@@ -1,4 +1,4 @@
-package com.abilov.bookingalphabackend.entity.dtos;
+package com.abilov.bookingalphabackend.entity.dtos.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

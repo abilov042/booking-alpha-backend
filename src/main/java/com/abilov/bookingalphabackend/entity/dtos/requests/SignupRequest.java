@@ -1,4 +1,4 @@
-package com.abilov.bookingalphabackend.entity.dtos;
+package com.abilov.bookingalphabackend.entity.dtos.requests;
 
 import com.abilov.bookingalphabackend.entity.concretes.Role;
 import jakarta.validation.constraints.Email;
